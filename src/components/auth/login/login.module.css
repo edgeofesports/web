@@ -1,0 +1,53 @@
+.login{
+  display: grid;
+  place-items: center;
+  height: 85dvh;
+}
+.loginChild{
+  padding: 80px 40px;
+  width: 85dvw;
+  max-width: 500px;
+  border: 2px solid var(--bg-1);
+  background: var(--bg-7);
+  /* box-shadow: 0 0 40px 2px var(--bg-3); */
+  border-radius: 15px;
+}
+.inputContainer{
+  /* margin: 10px 10px 20px 10px; */
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+}
+.inputContainer input{
+  border: none;
+  margin-left: 10px;
+  color: #d5dbe0;
+  width: 100%;
+  padding: 0 0 4px 4px;
+  border-bottom: 2px solid #2f4f4f67;
+}
+
+.loginTitle{
+  font-weight: 700;
+  font-size: 200%;
+  margin-bottom: 40px;
+}
+
+.registerLink{
+  /* margin-left: 20px; */
+  font-size: 90%;
+  margin-top: 20px;
+  color: #03adea;
+}
+.submitButton{
+  padding: 15px 15px;
+  outline: none;
+  background: none;
+  background: var(--bg-3);
+  border: none;
+  border-radius: 15px;
+  color: inherit;
+  float: right;
+  width: 100%;
+  margin-top: 20px;
+}

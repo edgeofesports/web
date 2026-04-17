@@ -1,0 +1,40 @@
+
+.world{
+  height: calc(100% - 15px);
+}
+.memberContainer{
+  overflow: auto;
+  height: calc(100% - 10px);
+  padding-bottom: 40px;
+  /* overflow: auto; */
+  /* display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 10px; */
+}
+.inputField {
+  width: 100%;
+  border: none;
+  margin-left: 10px;
+  color: var(--color);
+}
+.form {
+  display: flex;
+  padding: 8px 15px;
+  background: var(--bg-6);
+  border-radius: 10px;
+  align-items: flex-end;
+}
+.form img {
+  opacity: 0.7;
+}
+
+.samples {
+  margin-top: 15px;
+  padding: 0 5px;
+}
+.sampleTemplates {
+  opacity: 0.5;
+  font-size: 80%;
+  margin-left: 5px;
+  margin-bottom: 10px;
+}
