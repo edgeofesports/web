@@ -1,6 +1,7 @@
 // import { ApiResponse } from "@/global.types";
 import axios, { AxiosInstance, AxiosRequestConfig, RawAxiosResponseHeaders } from "axios";
-const serverUrl = "http://10.170.213.6:5000/";
+// const serverUrl = "http://10.170.213.6:5000/";
+const serverUrl = "https://edgeofesports.onrender.com/";
 
 export const ENDPOINTS = {
   LOGIN: "auth/login",
