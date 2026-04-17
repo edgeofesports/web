@@ -8,7 +8,7 @@ import { useRouter } from 'next/navigation';
 interface numpad {
   buttonTemplate ?: string,
   Withdraw ?: boolean,
-  authorization: string | undefined
+  authorization: boolean | null
 }
 
 
@@ -65,7 +65,7 @@ const Numpad :React.FC<numpad> = ({ buttonTemplate = "Template", Withdraw = fals
 
 
   async function payNow() {
-
+    return toast("under maintenance")
     if(+inputValue<10){
       return toast("amount must be greater than 10")
     }
@@ -77,7 +77,7 @@ const Numpad :React.FC<numpad> = ({ buttonTemplate = "Template", Withdraw = fals
       const fetchRes = await fetch("/api/payment/create/add-money", {
         method: "POST",
         headers: {
-          authorization,
+          // authorization,
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
@@ -96,7 +96,7 @@ const Numpad :React.FC<numpad> = ({ buttonTemplate = "Template", Withdraw = fals
               method: 'POST',
               body: JSON.stringify({response}),
               headers: {
-                authorization,
+                // authorization,
                 'Content-Type': 'application/json',
               },
           });
@@ -120,7 +120,7 @@ const Numpad :React.FC<numpad> = ({ buttonTemplate = "Template", Withdraw = fals
               method: 'POST',
               body: JSON.stringify({response}),
               headers: {
-                authorization,
+                // authorization,
               },
           });
           const fetchRes = await fetchData.json();

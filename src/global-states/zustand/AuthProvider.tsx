@@ -15,8 +15,6 @@ export default function AuthProvider({children, res}: Props) {
   const setIsAuthenticated = useAuth((state) => state.setIsAuthenticated);
   const setUser = useAuth((state) => state.setUser);
 
-  console.log("AuthProvider rendered with res:", res);
-
   useEffect(() => {
     setIsAuthenticated(res.success);
     setUser(res.data);

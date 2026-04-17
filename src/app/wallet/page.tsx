@@ -1,23 +1,21 @@
-"use server"
+"use client"
 import { getPersonalInfo } from '@/api/user'
 import BalanceSheet from '@/components/wallet/BalanceSheet'
 import TransactionsBtn from '@/components/wallet/TransactionsBtn'
 import WalletHeader from '@/components/wallet/WalletHeader'
-import { cookies } from 'next/headers'
+import { useAuth } from '@/global-states/zustand/auth'
 import React from 'react'
 
-const page = async () => {
-  const cookieStore = cookies();
-  const authorization = (await cookieStore).get("__eow_user_token")?.value;
-  
-    const response = await getPersonalInfo({ token: authorization });
-    if(!response.data){
+const page = () => {
+  const isAuthenticated = useAuth(state => state.isAuthenticated);
+  const user = useAuth(state => state.user);
+    if(!isAuthenticated){
       return (
         <div>Not Authorized</div>
       )
     };
 
-    const updatedBalance = `${(Math.round(response.data.balance * 100) / 100)}`.split(".")
+    const updatedBalance = `${(Math.round(user.balance * 100) / 100)}`.split(".")
   return (
     <div style={{padding: 10}}>
       <WalletHeader />

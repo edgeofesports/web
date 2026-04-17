@@ -1,6 +1,6 @@
 // import { ApiResponse } from "@/global.types";
 import axios, { AxiosInstance, AxiosRequestConfig, RawAxiosResponseHeaders } from "axios";
-const serverUrl = "https://appedgeofesports.vercel.app/";
+const serverUrl = "http://10.170.213.6:5000/";
 
 export const ENDPOINTS = {
   LOGIN: "auth/login",
